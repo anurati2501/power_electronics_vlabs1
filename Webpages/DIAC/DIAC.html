@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #922B21;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #F1F1F1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #111;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 22px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#Aim">Aim</a>
+  <a href="#Theory">Theory</a>
+  <a href="#Procedure">Procedure</a>
+  <a href="#Simulator">Simulator</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Reference">Reference</a>
+</div>
+
+<div class="main">
+  <h1>V-I Characteristics of DIAC</h1>
+  <h2 id = "Aim">Aim</h2>
+  <p>To study and plot the V-I characteristics of DIAC</p>
+  <h3> Objective </h3>
+  <h2 id = "Theory">Theory</h2>
+
+  <p>A DIAC (DIode Alternating Current) is a bi-directional semiconductor switch that conducts electrical current only after its break over voltage, VBO, has been reached momentarily. It can be turned on in both forward and reverse polarities above its break over voltage. It is mainly used to trigger and provide defined switching for a TRIAC. DIACs are essentially electronic component which offer no control or amplification but act much like a bidirectional switching diode. Most DIACs have a three-layer structure with breakover voltage of approximately 30 V. Their behavior is similar to that of a neon lamp, but it can be more precisely controlled and takes place at a lower voltage.DIACs have no gate electrode, unlike some other thyristors that they are commonly used to trigger, such as TRIACs. Some TRIACs, like Quadrac, contain a built-in DIAC in series with the TRIAC's gate terminal for this purpose. DIACs are also called symmetrical trigger diodes due to the symmetry of their characteristic curve. Because DIACs are bidirectional devices, their terminals are not labeled as anode and cathode but as A1 and A2 or main teminal MT1 and MT2.
+
+Because alternating current repeatedly reverses direction, DIACs will not stay latched longer than one-half cycle. If a DIAC becomes latched, it will continue to conduct current only as long as voltage is available to push enough current in that direction. When the AC polarity reverses, as it must twice per cycle, the DIAC will drop out due to insufficient current, necessitating another breakover before it conducts again. 
+</p>
+<img src="DIAC-Construction.png">
+<h3>VI Characteristics:</h3>
+<p>The diac performs like an open-circuit until its switching is exceeded. At that position the diac performs until its current decreases toward zero. Because of its abnormal construction, doesn’t switch sharply into a low voltage condition at a low current level like the triac or SCR, once it goes into transmission, the diac preserves an almost continuous –Ve resistance characteristic, that means, voltage reduces with the enlarge in current. This means that, unlike the triac and the SCR, the diac cannot be estimated to maintain a low voltage drop until its current falls below the level of holding current.
+A diac is a P-N-P-N structured four-layer, two-terminal semicon­ductor device, as shown in figure.A. MT2 and MTX are the two main terminals of the device. There is no control terminal in this de­vice. From the diagram, a diac unlike a diode, resembles a bipolar junction transistor (BJT) but with the following exceptions.
+
+
+<ul>
+<li>there is no terminal attached to the mid­dle layer (base) </li>
+<li>the three regions are nearly identical in size </li>
+<li>the doping level at the two end P-layers is the same so that the device gives sym­metrical switching characteristics for ei­ther polarity of the applied voltage </li>
+</ul>
+</p>
+<img src="DIAC-V-I-Characteristics.png">
+<h3>Working</h3>
+<p>When the terminal MT2 is positive, the current flow path is P1-N2-P2-N3 while for positive polarity of terminal MT1 the current flow path is P2-N2-P1-N1. The operation of the diac can be explained by imagining it as two diodes connected in series. When applied voltage in either polarity is small (less than breakover voltage) a very small amount of current, called the leakage current, flows through the device. Leakage current caused due to the drift of electrons and holes in the depletion region, is not sufficient to cause conduction in the device. The device remains in non-conducting mode. However, when the magnitude of the applied voltage exeeds the avalanche breakdown voltage, breakdown takes place and the diac current rises sharply, as shown in the characteristics shown in figure.</p>
+<h3> Construction</h3> 
+DIAC construction follows the same rule as a typical transistor construction without the Base terminal. As discussed above, the DIAC construction has two main terminals, MT1, and MT2. The DIAC construction uses two P-type materials and three N-type materials without the gate terminal.
+
+In the above image, Three N-type regions are shown with the name of NA, NB, and NC.
+P-type regions are shown as PA and PB. If MT1 terminal became more positive than MT2, the current will flow in the direction of PA -> NB -> PB -> NC. When the reverse situation occurs, the MT2 terminal became more positive than the MT1 and the current will flow in a direction of PB -> NB -> PA -> NA.
+
+The DIAC only starts to conduct the current when the breakdown voltage is reached.
+
+During the breakdown situations, there is a sudden decrease in the voltage drop occurs across the DIAC and the current flow will increase through it. This state is called a negative dynamic resistance region. The conduction continues until the current decreases to a a certain value called as holding current. Below this holding current, the DIAC resistance becomes high and it will enter in non-conducting state.
+
+As DIAC is a bidirectional device, it will happen for both directions of the current.
+<h3>Application</h3>
+The DIAC is designed specifically to trigger TRIAC or an SCR. As discussed above, the DIAC goes into avalanche conduction at the breakover voltage. Due to this, the device exhibits negative resistance characteristics and the voltage drop across it dramatically decreases, typically to about 5 Volts. This creates a break over current which is sufficient to turn on or trigger a TRIAC or an SCR.
+
+The DIAC is also applicable for symmetrical triggering applications, as the DIAC conducts in both directions.
+
+Now the most important question is, why we need DIAC to trigger a TRIAC?
+
+TRIAC do not fire symmetrically and because of this, TRIAC do not trigger at the same gate voltage level for one polarity as for the other one. This leads to an undesirable result. The unsymmetrical firing results in a current waveform which has a greater variety of harmonic frequencies leads to uncertain possibilities inside the Power circuit. To recover from this situation and to reduce the harmonic contents in a power system, DIAC is placed in series with the gate of a TRIAC.
+<!--<h3>Advantages</h3>
+<h3>Disadvantages</h3> !-->
+
+  <h2 id="Procedure">Procedure</h2>
+  <h2 id="Conclusion">Conclusion</h2>
+  <h2 id="Reference">Reference</h2>
+  
+
+
+
+
+</div>
+   
+</body>
+</html> 
+
