@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Times New Roman", Times, serif; 
+;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #922B21;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 22px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#aim">Aim</a>
+  <a href="#theory">Theory</a>
+  <a href="#procedure">Procedure</a>
+  <a href="#simulator">Simulator</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#references">References</a>
+</div>
+
+<div class="main">
+  <h1>V-I Characteristics of TRIAC</h2>
+  <h2 id="aim">Aim</h2>
+  <p>To study and plot the V-I characteristics of TRIAC.</p>
+  <h3>Objective</h3>
+  <p>Scroll down the page to see the result.</p>
+
+  <h2 id="theory">Theory</h2>
+  <p>TRIAC, an abbreviation for “TRIode for Alternating Current” is a three terminal, four layer, bi-directional semiconductor device that controls AC power. It is basically a combination of two SCRs connected in antiparallel configuration within the same chip.It differs from the silicon controlled rectifiers in the sense that it can conduct in either directions(Bidirectional) which means it will conduct irrespective of the fact whether the applied gate signal is positive or negative. Hence, this device can be used as a switch for AC systems.</p>
+  <img src="TRIAC-symbol.jpg">
+  <h3>Construction</h3>
+  <p>The arrangement of TRIAC is as shown in figure. As seen, it has 6 doped regions. The gate terminal G makes ohmic contacts with both the N and P materials. This permits trigger pulse of either polarity to start conduction. Electrical equivalent circuit and schematic symbol are shown in figure. Since the triac is a bidirectional device, the terms “anode” and “cathode” are redundant, and therefore, terminals are labeled as Main Terminal 1. (MT1), Main Terminal 2 (MT2) and Gate G. In  order to avoid confusion, it has become common practice to specify all the voltages and currents using MT1 as the reference.</p>
+  <img src="Triac-Basic-Structure-and-Equivalent-Circuit.jpg">
+  <h3>Operation and Working</h3>
+  <p>Triac can conduct current irrespective of the voltage polarity of terminals MT1 and MT2 with respect to each other and that of gate and terminal MT2. Consequently four different possibilities of operation of triac exists. They are:
+  <h4>1. Terminal MT2 and gate are positive with respect to terminal MT1</h4>
+When terminal MT2 is positive with respect to terminal MT1 current flows through path P1-N1-P2-N2. The two junctions P1-N1 and P2-N2 are forward biased whereas junction N1 P2 is blocked. The triac is now said to be positively biased.
+A positive gate with respect to terminal MT1 forward biases the junction P2-N2 and the break­down occurs as in a normal SCR.
+  <h4>2. Terminal MT2 is positive but gate is negative with respect to terminal MT1</h4>
+Though the flow path of current remains the same as in mode 1 but now junction P2-N3 is forward biased and current carriers injected into P2 turn on the triac.
+  <h4>3.Terminal MT2 and gate are negative with respect to terminal MT1</h4>
+When terminal MT2 is negative with respect to terminal MT1, the current flow path is P2-N1-P1-N4. The two junctions P2-N1 and P1 – N4 are forward biased whereas junction N1-P1 is blocked. The triac is now said to be negatively biased.
+A negative gate with respect to terminal MT1 injects current carriers by forward biasing junc­tion P2-N3 and thus initiates the conduction.
+  <h4>4. Terminal MT2 is negative but gate is positive with respect to terminal MT1</h4>
+Though the flow path of current remains the same as in mode 3 but now junction P2-N2 is forward biased, current carriers are injected and therefore, the triac is turned on.
+Generally, trigger mode 4 should be avoided especially in circuits where high di/dt  may occur. The sensitivity of triggering modes 2 and 3 is high and in case of marginal trigger­ing capability negative gate pulses should be used. Though the triggering mode 1 is more sensitive compared to modes 2 and 3, it requires a positive gate trigger. However, for bidirectional control and uniform gate trigger modes 2 and 3 are preferred.
+</p>
+  <h3>Characteristics</h3>
+  <img src="TRIAC-Voltage-Current-Characteristics.jpg">
+  <p>Typical V-I characteristics of a triac are shown in figure. The triac has on and off state characteristics similar to SCR but now the characteristic is applicable to both positive and negative voltages. This is expected because triac consists of two SCRs connected in parallel but opposite in directions.
+MT2 is positive with respect to MTX in the first quadrant and it is negative in the third quadrant. As already said in previous blog posts, the gate triggering may occur in any of the following four modes.
+Quadrant I operation  : VMT2, positive; VG1 positive
+Quadrant II operation : VMT21 positive;  VGl negative
+Quadrant III operation:  VMT21 negative; VGl negative
+Quadrant IV operation : VMT21 negative; VG1 positive
+where VMT21 and VGl are the voltages of terminal MT2 and gate with respect to terminal MT1.
+The device, when starts conduction permits a very heavy amount of current to flow through it. This large inrush of current must be restricted by employing external resistance, otherwise the device may get damaged.
+The gate is the control terminal of the device. By applying proper signal to the gate, the firing angle of the device can be controlled. The circuits used in the gate for triggering the device are called the gate-triggering circuits. The gate-triggering circuits for the triac are almost same like those used for SCRs. These triggering circuits usually generate trigger pulses for firing the device. The trigger pulse should be of sufficient magnitude and duration so that firing of the device is assured. Usually, a duration of 35 us is sufficient for sustaining the firing of the device.
+A typical triac has the following voltage/current values:
+<ul>
+<li>Instantaneous on-state voltage – 1.5 Volts</li>
+<li>On-state current – 25 Amperes</li>
+<li>Holding current, IH – 75 Milli Amperes</li>
+<li>Average triggering current, IG – 5 Milliamperes</li>
+</ul>>
+</p>
+</div>
+   
+</body>
+</html> 
