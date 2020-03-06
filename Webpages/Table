@@ -1,0 +1,66 @@
+<table style="width:100%" id="observation-table">
+  <tr>
+    <th>Sr. No.</th>
+    <th colspan="2">Ig</th>
+    <th colspan="2">Ig</th>
+    <th colspan="2">Ig</th>
+  </tr>
+  <tr style="font-weight: bold;">
+    <td></td>
+    <td>Vak</td>
+    <td>Ia</td>
+    <td>Vak</td>
+    <td>Ia</td>
+    <td>Vak</td>
+    <td>Ia</td>
+  </tr>
+  <!--  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>-->
+</table>
+
+<button id="button" onclick="addRow()">Start</button>
+
+
+
+table {
+  width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#button{
+  position: fixed;
+  top: 70%;
+  left: 45%;
+  padding: 1em 2em;
+}
+
+
+function addRow() {
+  var table = document.getElementById("observation-table");
+  var newRow = table.insertRow(2);
+
+  var cellArr = [];
+
+  for (i = 0; i < 7; i++) {
+    newRow.insertCell(i).innerHTML = i;
+  }
+}
