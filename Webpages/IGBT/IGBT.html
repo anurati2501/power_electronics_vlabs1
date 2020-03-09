@@ -64,21 +64,21 @@ body {
 
   <h2 id="theory">Theory</h2>
   <p>The  Insulated Gate Bipolar Transistor also called an IGBT  is a three-terminal electronic component, and these terminals are termed as emitter, collector and gate.It is a cross between a conventional Bipolar Junction Transistor, (BJT) and a Field Effect Transistor, (MOSFET) making it ideal as a semiconductor switching device.It is a voltage controlled device that combines the advantages of both MOSFET and BJT. That is the fastest acting feature and high power capability of the bipolar transistor, with the voltage control feature of the MOSFET. Its emitter characteristics are similar to those of the bipolar transistor and control features are those of MOSFET.It has high input impedance like MOSFET.</p>
-  <img src="C:\Users\aditi\Desktop\BE PROJ\igbt-symbol.png">
+  <img src="igbt-symbol.png">
   <h3>Basic Structure</h3>
   <p>The basic structure of the N-channel IGBT is shown below. This structure is plain that the IGBTs silicon cross section is almost equal to that of a vertical power MOSFET except P+ injecting layer. It shares the same structure of MOS gate & P-wells with N+ source regions. In the following structure, the N+ layer is located at the top is called as the source and the bottom layer is called as a drain or collector.
     IGBT takes a parasitic thyristor includes the 4-layer NPN structures. There are some IGBs that are fabricated without the N+ buffer layer is called as NPT IGBTS non punch through), whereas some IGBTs are fabricated with the N+ buffer layer called as PT IGBTs (punch through). The performance of the device can considerably increase by existing the buffer layer. The operation of an IGBT is faster to that of power BJT than a power MOSFET.
  </p>
-  <img src="C:\Users\aditi\Desktop\BE PROJ\basic-structure-n-channel-igbt.gif">
+  <img src="basic-structure-n-channel-igbt.gif">
   <h3>Circuit Diagram</h3>
   <p>Based on the basic structure of the IGBT, a simple circuit can be drawn using PNP and NPN Transistors, JFET, OSFET, that is shown in the below figure. The collector terminal of the NPN transistor is connected to the base terminal of the PNP via JFET transistor. These transistors signify the parasitic thyristor which creates a regenerative feedback loop. The RB resistor signifies the shorting of the base-emitter terminals of the NPN transistor to ensure that the thyristor doesn’t latch up, that will lead to the IGBT latch-up.
     The JFET transistor signifies the construction of current b/n any two adjacent IGBT cells. It allows the MOSFET and supports most of the voltage. A circuit symbol for the IGBT is shown below, that consists of three terminals namely emitter, gate and collector.
 </p>
- <img src="C:\Users\aditi\Desktop\BE PROJ\igbt-circuit-diagram.png">
+ <img src="igbt-circuit-diagram.png">
   <h3>VI and Transfer Characteristics</h3>
-<img src="C:\Users\aditi\Desktop\BE PROJ\circuit-diagram-for-igbt.jpg">
+<img src="circuit-diagram-for-igbt.jpg">
   <p>The V-I characteristic of an IGBT shows the plot of collector current IC versus collector emitter voltage VCE for various values of gate emitter voltage.It is similar to the shape of the output characteristic of BJT, in forward direction. The IGBT is a voltage controlled device so here the controlling parameter is gate emitter voltage VGE.The transfer characteristic of an IGBT is a plot of collector current IC versus gate emitter voltage VGE is shown below.</p>
-    <img src="C:\Users\aditi\Desktop\BE PROJ\characteristics.jpg">
+    <img src="characteristics.jpg">
   <p>In forward conducting mode, positive voltage is applied to the collectorof the device with gate short circuited to the emitter terminal then the device operates in its forward blocking mode. Then the positive gate to emitter voltage applied of sufficient magnitude then the device switches into forward conducting state.The device characteristics are similar to that of a forward biased P-N diode. This continues upto gate-bias voltage sufficiently larger then the device forward current will saturate by increasing the gate-bias voltage the state of the device will operate in its active region. To turn off the device, remove the gate-bias voltage, then the collector current decays gradually and device becomes off. Actually the current flow cannot occur when negative voltage is applied to the collector with respect to the emitter, hence the device has reverse blocking capability.
 The transfer characteristic of an IGBT is a plot of collector current IC versus gate emitter voltage VGE as shown in figure. IGBT is in the OFF state, when VGE is less than the threshold voltage VGET. Junction J2 blocks the forward voltage and junction J1 blocks the reverse voltage appears across collector and emitter, when the device is OFF.
 </p>
