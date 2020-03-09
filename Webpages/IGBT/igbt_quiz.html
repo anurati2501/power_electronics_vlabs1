@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+body {
+font-family: "Times New Roman", Times,serif;
+}
+
+
+#main {
+width: 80%;
+max-width: 950px;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #922B21;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+</head>
+<body>
+<div class="sidenav">
+  <a href="IGBT.html">Aim</a>
+  <a href="IGBT.html#Theory">Theory</a>
+  <a href="IGBT.html#Procedure">Procedure</a>
+  <a href="#Simulator">Simulator</a>
+  <a href="igbt_quiz.html">Quiz</a>
+  <a href="#Reference">References</a>
+</div>
+<div id="main">
+<div id="header">
+<h1 style="text-align: center">IGBT Quiz</h1>
+</div>
+
+<form id="form1">
+
+<h2>Choose the correct statement</h2>
+<label for="stmt_string"><input type="radio" name="statement" value="0" id="stmt_string" />IGBTs have higher switching losses as compared to BJTs</label>
+<label for="stmt_join"><input type="radio" name="statement" value="0" id="stmt_join" />IGBTs have secondary breakdown problems</label>
+<label for="stmt_info"><input type="radio" name="statement" value="10" id="stmt_info" />IGBTs have lower gate drive requirements</label>
+<label for="stmt_condition"><input type="radio" name="statement" value="0" id="stmt_condition"/>IGBTs are current controlled devices</label>
+
+<h2>The structure of the IGBT is a</h2>
+<label for="struct_string"><input type="radio" name="structure" value="0" id="struct_string"/>P-N-P structure connected by a MOS gate</label>
+<label for="struct_join"><input type="radio" name="structure" value="0" id="struct_join"/>N-N-P-P structure connected by a MOS gate</label>
+<label for="struct_info"><input type="radio" name="structure" value="0" id="struct_info" />N-P-N-P structure connected by a MOS gate</label>
+<label for="struct_condition"><input type="radio" name="structure" value="10" id="struct_condition" />P-N-P-N structure connected by a MOS gate</label>
+
+<h2>In IGBT, the n– layer above the p+ layer is called as the</h2>
+<label for="lay_string"><input type="radio" name="layer" value="10" id="lay_string" />drift layer</label>
+<label for="lay_join"><input type="radio" name="layer" value="0" id="lay_join" />injection layer</label>
+<label for="lay_info"><input type="radio" name="layer" value="0" id="lay_info" />body layer</label>
+<label for="lay_condition"><input type="radio" name="layer" value="0" id="lay_condition" />collector Layer</label>
+
+<h2>A latched up IGBT can be turned off by</h2>
+<label for="off_string"><input type="radio" name="latched" value="10" id="off_string" />forced commutation of current</label>
+<label for="off_join"><input type="radio" name="latched" value="0" id="off_join" />forced commutation of voltage</label>
+<label for="off_info"><input type="radio" name="latched" value="0" id="off_info" />use of a snubber circuit</label>
+<label for="off_condition"><input type="radio" name="latched"  value="0" id="off_condition" />none of the mentioned</label>
+
+<h2>The static V-I curve of an IGBT is plotted with</h2>
+<label for="vi_string"><input type="radio" name="static" value="0" id="vi_string" /> Vce as the parameter</label>
+<label for="vi_join"><input type="radio" name="static" value="0" id="vi_join" />Ic as the parameter</label>
+<label for="vi_info"><input type="radio" name="static" value="10" id="vi_info" />Vge as the parameter</label>
+<label for="vi_condition"><input type="radio" name="static"  value="0" id="vi_condition" />none of the mentioned</label>
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+
+<p>Your grade is: <span id="grade">__</span>/50</p>
+<p id="grade2"></p>
+</div>
+<script>
+document.getElementById("form1").onsubmit=function() {
+       statement = parseInt(document.querySelector('input[name = "statement"]:checked').value);
+     structure = parseInt(document.querySelector('input[name = "structure"]:checked').value);
+     layer = parseInt(document.querySelector('input[name = "layer"]:checked').value);
+     latched = parseInt(document.querySelector('input[name = "latched"]:checked').value);
+     static = parseInt(document.querySelector('input[name = "static"]:checked').value);
+     
+     
+     result = statement + structure + layer + latched + static;
+     
+  document.getElementById("grade").innerHTML = result;
+     
+
+
+return false; 
+}
+
+</script>
+
+
+
+</body>
+</html>
