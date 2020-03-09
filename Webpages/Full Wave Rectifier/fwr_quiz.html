@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+body {
+font-family: "Times New Roman", Times,serif;
+}
+
+
+#main {
+width: 80%;
+max-width: 950px;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #922B21;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+</head>
+<body>
+<div class="sidenav">
+  <a href="full_wave.html">Aim</a>
+  <a href="full_wave.html#Theory">Theory</a>
+  <a href="full_wave.html#Procedure">Procedure</a>
+  <a href="#Simulator">Simulator</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#Reference">References</a>
+</div>
+<div id="main">
+<div id="header">
+<h1 style="text-align: center">Full Wave Rectifier Quiz</h1>
+</div>
+
+<form id="form1">
+
+<h2>The basic reason why a full wave rectifier has  twice the efficiency of a half wave rectifier is that </h2>
+<label for="stmt_string"><input type="radio" name="statement" value="0" id="stmt_string" />it makes use of transformer</label>
+<label for="stmt_join"><input type="radio" name="statement" value="0" id="stmt_join" />its ripple factor is much less</label>
+<label for="stmt_info"><input type="radio" name="statement" value="10" id="stmt_info" />it utilizes both half-cycle of the input</label>
+<label for="stmt_condition"><input type="radio" name="statement" value="0" id="stmt_condition"/>its output frequency is double the line frequency</label>
+
+<h2>The maximum efficiency of full wave rectification is</h2>
+<label for="struct_string"><input type="radio" name="structure" value="0" id="struct_string"/>40.6%</label>
+<label for="struct_join"><input type="radio" name="structure" value="0" id="struct_join"/>100%</label>
+<label for="struct_info"><input type="radio" name="structure" value="0" id="struct_info" />85.6%</label>
+<label for="struct_condition"><input type="radio" name="structure" value="10" id="struct_condition" />81.2%</label>
+
+<h2>In a center tapped full wave rectifier, the input sine wave is 20sin500 ᴨt. The average output voltage is</h2>
+<label for="lay_string"><input type="radio" name="layer" value="10" id="lay_string" />12.73V</label>
+<label for="lay_join"><input type="radio" name="layer" value="0" id="lay_join" />6.93V</label>
+<label for="lay_info"><input type="radio" name="layer" value="0" id="lay_info" />11.62V</label>
+<label for="lay_condition"><input type="radio" name="layer" value="0" id="lay_condition" />3.23V</label>
+
+<h2>In a center tap full wave rectifier, if Vm is the peak voltage between center tap and one end of the secondary, the maximum voltage coming across the reverse bias diode is</h2>
+<label for="off_string"><input type="radio" name="latched" value="0" id="off_string" />Vm</label>
+<label for="off_join"><input type="radio" name="latched" value="10" id="off_join" />2 Vm</label>
+<label for="off_info"><input type="radio" name="latched" value="0" id="off_info" />Vm/2</label>
+<label for="off_condition"><input type="radio" name="latched"  value="0" id="off_condition" />Vm/√2</label>
+
+<h2>In a full wave rectifier, if the input frequency is 50 Hz, then output frequency will be</h2>
+<label for="vi_string"><input type="radio" name="static" value="0" id="vi_string" />50 Hz</label>
+<label for="vi_join"><input type="radio" name="static" value="0" id="vi_join" />75 Hz</label>
+<label for="vi_info"><input type="radio" name="static" value="10" id="vi_info" />100 Hz</label>
+<label for="vi_condition"><input type="radio" name="static"  value="0" id="vi_condition" />200 Hz</label>
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+
+<p>Your grade is: <span id="grade">__</span>/50</p>
+<p id="grade2"></p>
+</div>
+<script>
+document.getElementById("form1").onsubmit=function() {
+       statement = parseInt(document.querySelector('input[name = "statement"]:checked').value);
+     structure = parseInt(document.querySelector('input[name = "structure"]:checked').value);
+     layer = parseInt(document.querySelector('input[name = "layer"]:checked').value);
+     latched = parseInt(document.querySelector('input[name = "latched"]:checked').value);
+     static = parseInt(document.querySelector('input[name = "static"]:checked').value);
+     
+     
+     result = statement + structure + layer + latched + static;
+     
+  document.getElementById("grade").innerHTML = result;
+     
+
+
+return false; 
+}
+
+</script>
+
+
+
+</body>
+</html>
