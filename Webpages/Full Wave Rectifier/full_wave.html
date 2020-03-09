@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Times New Roman", Times, serif; 
+;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #922B21;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 22px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#aim">Aim</a>
+  <a href="#theory">Theory</a>
+  <a href="#procedure">Procedure</a>
+  <a href="#simulator">Simulator</a>
+  <a href="fwr_quiz.html">Quiz</a>
+  <a href="#references">References</a>
+</div>
+
+<div class="main">
+  <h1>Single Phase Full Wave Rectifier</h2>
+  <h2 id="aim">Aim</h2>
+  <p>To study the input and output current and voltage waveforms of a single phase full wave rectifier.
+</p>
+ 
+  <p></p>
+
+  <h2 id="theory">Theory</h2>
+  <p>When we use a half-wave rectifier, a significant amount of power gets wasted as the only one half of each cycle passes through and the other the cycle gets blocked. Moreover, the half-wave rectifier is not efficient (40.6%) and we can not use it for applications which need a smooth and steady DC output. For more efficient and steady DC, we use a full wave rectifier.
+  A full wave rectifier converts both halves of each cycle of an alternating wave (AC signal) into pulsating DC signal.
+  We can further classify full wave rectifiers into
+  <ul>
+    <li>Centre-tapped Full Wave Rectifier</li>
+    <li>Full Wave Bridge Rectifier</li>
+  </ul> 
+
+</p>
+  <img src="centre-tapped-full-wave.png">
+  <img src="full-bridge-rectifier.png">
+  <h3>Construction of Centre-tapped Full Wave Rectifier</h3>
+<p>A centre-tapped full wave rectifier system consists of:
+<ul>
+  <li>Centre-tapped Transformer</li>
+  <li>Two Diodes</li>
+  <li>Resistive Load</li>
+</ul>
+</p>
+<p>
+  Centre-tapped Transformer: – It is a normal transformer with one slight modification. It has an additional wire connected to the exact centre of the secondary winding. This type of construction divides the AC voltage into two equal and opposite voltages namely +Ve voltage (Va) and -Ve voltage (Vb). The total output voltage is: V=Va+Vb
+
+</p>
+<img src="centre-tapped-output.png">
+  <h3>Working</h3>
+
+  <p>We apply an AC voltage to the input transformer. During the positive half-cycle of the AC voltage, terminal 1 will be positive, centre-tap will be at zero potential and terminal 2 will be negative potential. This will lead to forward bias in diode D1 and cause current to flow through it. During this time, diode D2 is in reverse bias and will block current through it.
+
+</p>
+    <img src="full-wave-positive.png">
+<p>During the negative half-cycle of the input AC voltage, terminal 2 will become positive with relative to terminal 2 and centre-tap. This will lead to forward bias in diode D2 and cause current to flow through it. During this time, diode D1 is in reverse bias and will block current through it.
+</p>
+<img src  ="full-wave-negative.png">    
+<p>During the positive cycle, diode D1 conducts and during negative cycle diode D2 conducts and during positive cycle. As a result, both half-cycles are allowed to pass through. The average output DC voltage here is almost twice of the DC output voltage of a half-wave rectifier.
+</p>
+<img src="full-wave-output.png">
+</ul>
+<h3>Advantages of full wave rectifiers</h3>
+<ul>
+  <li>Full wave rectifiers have higher rectifying efficiency than half-wave rectifiers. This means that they convert AC to DC more efficiently.</li>
+  <li>They have low power loss because no voltage signal is wasted in the rectification process.</li>
+  <li>The output voltage of centre-tapped full wave rectifier has lower ripples than a halfwave rectifiers.</li>
+</ul>
+<h3>Disadvantages of full wave rectifier</h3>
+<ul>
+  <li>The centre-tapped rectifier is more expensive than half-wave rectifier and tends to occupy a lot of space.</li>
+ </ul> 
+
+</div>
+   
+</body>
+</html> 
