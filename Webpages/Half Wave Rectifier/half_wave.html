@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Times New Roman", Times, serif; 
+;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #922B21;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 22px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#aim">Aim</a>
+  <a href="#theory">Theory</a>
+  <a href="#procedure">Procedure</a>
+  <a href="#simulator">Simulator</a>
+  <a href="halfwave_quiz.html">Quiz</a>
+  <a href="#references">References</a>
+</div>
+
+<div class="main">
+  <h1>Single Phase Half Wave Rectifier</h2>
+  <h2 id="aim">Aim</h2>
+  <p>To study the input and output current and voltage waveforms of a single phase half wave rectifier.
+</p>
+ 
+  <p></p>
+
+  <h2 id="theory">Theory</h2>
+  <p>A half wave rectifier is the simplest form of rectifier available. The diagram below illustrates the basic principle of a half-wave rectifier. When a standard AC waveform is passed through a half-wave rectifier, only half of the AC waveform remains. Half-wave rectifiers only allow one half-cycle (positive or negative half-cycle) of the AC voltage through and will block the other half-cycle on the DC side, as seen below.
+</p>
+  <img src="half-wave-rectifier-theory.png">
+  <p>Only one diode is required to construct a half-wave rectifier. In essence, this is all that the half-wave rectifier is doing.
+
+ </p>
+  <p>Since DC systems are designed to have current flowing in a single direction, putting an AC waveform with positive and negative cycles through a DC device can have destructive (and dangerous) consequences. So we use half-wave rectifiers to convert the AC input power into DC output power.
+  But the diode is only part of it – a complete half-wave rectifier circuit consists of 3 main parts:
+</p>
+ <ul>
+  <li>A transformer</li>
+  <li>A resistive load</li>
+  <li>A diode</li>
+</ul>
+<p>A half-wave rectifier looks as shown below:</p>
+<img src="half-wave-rectifier-circuit.png">
+  <h3>Working</h3>
+
+  <p>During the positive half cycle of the AC voltage, the diode will be forward biased and the current flows through the diode. During the negative half cycle of the AC voltage, the diode will be reverse biased and the flow of current will be blocked. The final output voltage waveform on the secondary side (DC) is shown
+</p>
+    <img src="half-wave-rectifier-circuit-diagram.png">
+<p>
+<h4>Ripple Factor of Half Wave Rectifier</h4>
+<p>‘Ripple’ is the unwanted AC component remaining when converting the AC voltage waveform into a DC waveform. Even though we try out best to remove all AC components, there is still some small amount left on the output side which pulsates the DC waveform. This undesirable AC component is called ‘ripple’.
+The formula for ripple factor is:
+</p>
+<img src  ="ripple-factor-of-half-wave-rectifier.png">    
+<h4>Efficiency of Half Wave Rectifier</h4>
+<p>Rectifier efficiency (η) is the ratio between the output DC power and the input AC power. The formula for the efficiency is equal to:
+</p>
+<img src="efficiency-of-half-wave-rectifier.png">
+<h4>RMS value of Half Wave Rectifier</h4>
+<p>To derive the RMS value of half wave rectifier, we need to calculate the current across the load. If the instantaneous load current is equal to iL = Imsinωt, then the average of load current (IDC) is equal to:
+</p>
+<img src="output-current-halfwave.png">
+<h3>Applications of half wave rectifier</h3>
+<ul>
+  <li>For rectification applications</li>
+  <li>For signal demodulation applications</li>
+  <li>For signal peak applications</li>
+</ul>
+<h3>Advantages of half wave rectifiers</h3>
+<p>The main advantage of half-wave rectifiers is in their simplicity. As they don’t require as many components, they are simpler and cheaper to setup and construct.
+As such, the main advantages of half-wave rectifiers are:
+</p>
+<ul>
+  <li>Simple (lower number of components)</li>
+  <li>Cheaper upfront cost (as there is less equipment. Although there is a higher cost over time due to increased power losses)</li>
+</ul>
+<h3>Disadvantages of half wave rectifier</h3>
+<ul>
+  <li>They only allow a half-cycle through per sinewave, and the other half-cycle is wasted. This leads to power loss.</li>
+  <li>They produce a low output voltage.</li>
+  <li>The output current we obtain is not purely DC, and it still contains a lot of ripple (i.e. it has a high ripple factor)</li>
+
+
+
+</div>
+   
+</body>
+</html> 
